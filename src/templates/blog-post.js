@@ -17,15 +17,12 @@ const BlogPostTemplate = ({ data }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article
-        className="max-w-3xl px-5 mx-auto prose"
+        className="px-5 mx-auto prose xl:prose-xl xl:max-w-5xl lg:prose-lg"
         itemScope
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1
-            className="font-display font-extrabold xl:text-5xl"
-            itemProp="headline"
-          >
+          <h1 className="font-extrabold xl:text-5xl" itemProp="headline">
             {post.frontmatter.title}
           </h1>
           <p>{post.frontmatter.date}</p>

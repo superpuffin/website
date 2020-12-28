@@ -9,7 +9,6 @@ module.exports = {
       // 'serif': ['Merriweather', ...defaultTheme.fontFamily.serif],
       // 'display': ['Montserrat', ...defaultTheme.fontFamily.display]
       serif: ["Merriweather"],
-      display: ["Montserrat"],
     },
     extend: {
       colors: {

@@ -1115,16 +1115,6 @@
   resolved "https://registry.yarnpkg.com/@fontsource/merriweather/-/merriweather-4.0.1.tgz#d99914e34fe1c9047615b763595ccdcd1ff84684"
   integrity sha512-08fkEi59T5fPFnyst3pJE/fqPuhDI5URsnzDLJ4TZXjNCwIfQ83U5ki/p516vJ/wV+ld9LBMtSXcFbxTH3nx9A==
 
-"@fontsource/montserrat@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.0.1.tgz#f959665dc3666705f29ca8b7206e019ae153e2a1"
-  integrity sha512-mnW+K5vAWjZ8ARi9lZXf6jmTfqBRSiWYHwbWMVib0erDwrFI26VritMQ8qZ9auJe8nUPXvxS+fvhk8kX2COJSQ==
-
-"@fontsource/roboto@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-4.0.1.tgz#60b53309884dfec0ddce9d8abd7ee8754c31d088"
-  integrity sha512-4x/TVxwMxK9Cqy3Bn2NZyQtXeYA9nMOBj+ideuRvjXg3HJCk/jJlEClUsgguCgYNQEBCYaVCjgGr4f9n+VvBuA==
-
 "@fullhuman/postcss-purgecss@^3.0.0":
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/@fullhuman/postcss-purgecss/-/postcss-purgecss-3.1.3.tgz#47af7b87c9bfb3de4bc94a38f875b928fffdf339"

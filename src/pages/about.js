@@ -8,7 +8,7 @@ const About = () => {
   return (
     <Layout>
       <SEO />
-      <div className="prose">
+      <div className="prose xl:prose-xl xl:max-w-5xl lg:prose-lg">
         <h1 id="about-me">About me</h1>
         <p>
           Hi! My name is Yorgos Bos, I am a biology student at Utrecht

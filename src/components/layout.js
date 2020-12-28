@@ -4,7 +4,7 @@ import Nav from "../components/nav"
 
 const Layout = ({ children }) => {
   return (
-    <div className="space-y-6 min-h-screen flex flex-col justify-between">
+    <div className="min-h-screen flex flex-col justify-between">
       <header className="">
         {/* {header} */}
         <Nav className="bg-primary" />
@@ -20,10 +20,12 @@ const Layout = ({ children }) => {
         </svg> */}
       </header>
 
-      <main className="max-w-3xl px-5 mx-auto">{children}</main>
+      <main className="max-w-3xl xl:max-w-4xl px-5 mx-auto my-5 md:my-4 lg:my-2 xl:my-0">
+        {children}
+      </main>
 
-      <footer className="p-4 w-full mx-auto bg-ysnow">
-        <div className="max-w-3xl mx-auto">
+      <footer className="p-4 w-full mx-auto lg:pt-6 xl:pt-8">
+        <div className="max-w-3xl xl:max-w-4xl mx-auto">
           <p className="mx-auto">
             © {new Date().getFullYear()}, Built with
             {` `}

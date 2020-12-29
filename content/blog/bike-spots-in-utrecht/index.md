@@ -60,20 +60,13 @@ All right! now we can get down to business. First let's have a look at our datas
 head(data, 3)
 ```
 
-<div class="table-responsive">
-
 | facilityName       | time                           | totalPlaces | freePlaces | occupiedPlaces |
 | :----------------- | :----------------------------- | ----------: | ---------: | -------------: |
 | Pop Up Janskerkhof | 2020-06-08T17:32:43.718784055Z |           1 |          1 |              0 |
 | Pop Up Vredenburg  | 2020-06-08T17:32:43.718784055Z |           1 |          1 |              0 |
 | Knoop Laag         | 2020-06-08T17:32:43.718784055Z |        2926 |          0 |           2926 |
 
-</div>
-<br>
-
-<!-- smartify converts the standard quotes to smart quotes -->
-
-As can be seen from the output above, the dataset contains rows with {{ '"Hoog" and "Laag"' | smartify }} appended to the bike stalls' names. This is to represent the High and Low bike spaces in the rack, respectively. This data isn't important to us now, so we will drop the rows as follows.
+As can be seen from the output above, the dataset contains rows with "Hoog" and "Laag" appended to the bike stalls' names. This is to represent the High and Low bike spaces in the rack, respectively. This data isn't important to us now, so we will drop the rows as follows.
 
 ```R
 # Remove all rows containing "Hoog"
@@ -82,9 +75,9 @@ pruned_data = data[- grep("Hoog", data$facilityName),]
 pruned_data = pruned_data[!grepl("Laag", pruned_data$facilityName),]
 ```
 
-As you can see, we first create a vector (variable) `pruned_data` and assign it to data minus (-) the rows (first argument in the square brackets) containing {{'"Hoog"'|smartify}}. This matching is done with the `grep()` function, which only returns the matches it has found in the vector you wanted it to search in. In this case `data$facilityName`.
+As you can see, we first create a vector (variable) `pruned_data` and assign it to data minus (-) the rows (first argument in the square brackets) containing "Hoog". This matching is done with the `grep()` function, which only returns the matches it has found in the vector you wanted it to search in. In this case `data$facilityName`.
 
-In the second line we use a different approach. This is just for illustrative purposes; you could just as well use the same method used in the the first line. The second method takes `pruned_data` and selects all rows which do _not_ (`!`) match {{'"Laag"'|smartify}}. This cannot be done with `grep()`, as it just returns the matching rows. `grepl()`, however, returns either a `TRUE` for a match or a `FALSE` for a non-match.
+In the second line we use a different approach. This is just for illustrative purposes; you could just as well use the same method used in the the first line. The second method takes `pruned_data` and selects all rows which do _not_ (`!`) match "Laag" This cannot be done with `grep()`, as it just returns the matching rows. `grepl()`, however, returns either a `TRUE` for a match or a `FALSE` for a non-match.
 
 ### Plotting the data
 

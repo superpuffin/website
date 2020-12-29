@@ -24,25 +24,24 @@ const Nav = () => {
   if (!navVisible) {
     menuIcon = (
       <svg
-        class="block h-6 w-6"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        aria-hidden="true"
+        className="block h-8 w-8"
       >
         <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M4 6h16M4 12h16m-7 6h7"
         />
       </svg>
     )
   } else {
     menuIcon = (
       <svg
-        class="h-6 w-6"
+        class="h-8 w-8"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -124,7 +123,7 @@ const Nav = () => {
           <div class="-mr-2 flex md:hidden">
             {/* <!-- Mobile menu button --> */}
             <button
-              class="bg-ysnow inline-flex items-center justify-center p-2 rounded-md hover:text-ysnow hover:bg-secondary"
+              className="text-ysnow hover:text-secondary inline-flex items-center justify-center p-1 focus:outline-none rounded focus:ring focus:ring-1 focus:ring-white"
               onClick={() => setNavVisible(!navVisible)}
             >
               <span class="sr-only">Open main menu</span>

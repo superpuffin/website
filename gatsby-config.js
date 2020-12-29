@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/website",
   siteMetadata: {
     title: `Yorgos Bos`,
     author: {
@@ -18,10 +19,11 @@ module.exports = {
       {
         name: "About me",
         link: "/about",
-      },{
+      },
+      {
         name: "Contact",
-        link: "/contact"
-      }
+        link: "/contact",
+      },
     ],
   },
   plugins: [

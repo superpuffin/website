@@ -61,34 +61,32 @@ const Nav = () => {
   const props = useSpring({
     config: {
       tension: 500,
-      mass: 1.2,
+      mass: 1.5,
+      friction: 50,
     },
-    to: {
-      height: navVisible ? "350px" : "0px",
-      opacity: navVisible ? 1 : 0,
-      display: navVisible ? "flex" : "none",
+    from: { display: "none", height: "0px", opacity: 0 },
+    to: async (next, cancel) => {
+      await next({ display: "flex" })
+      await next({
+        height: navVisible ? "350px" : "0px",
+        opacity: navVisible ? 1 : 0,
+      })
+      await next({ display: navVisible ? "flex" : "none" })
     },
   })
 
-  const getLinks = (data, mobile = false) => {
-    return data.site.siteMetadata.menuLinks.map(link => {
-      let clist
-
-      if (mobile) {
-        clist =
-          "px-3 text-center rounded-md font-bold text-xl py-2 mx-1 text-ysnow hover:text-secondary hover:bg-ysnow"
-      } else {
-        clist =
-          "px-3 rounded-md font-bold text-sm py-2 mx-1 text-ysnow hover:text-secondary hover:bg-ysnow"
-      }
-
-      return (
-        <Link className={clist} to={link.link}>
-          {link.name}
-        </Link>
-      )
-    })
-  }
+  const getLinks = data.site.siteMetadata.menuLinks.map(link => {
+    return (
+      <Link
+        className={
+          "px-3 sm:text-center rounded-md font-bold sm:text-xl md:text-sm py-2 mx-1 text-ysnow hover:text-secondary hover:bg-ysnow"
+        }
+        to={link.link}
+      >
+        {link.name}
+      </Link>
+    )
+  })
 
   return (
     <nav className="bg-primary">
@@ -115,9 +113,7 @@ const Nav = () => {
               </Link>
             </span>
             <div class="hidden md:block">
-              <div class="ml-10 flex items-baseline space-x-3">
-                {getLinks(data)}
-              </div>
+              <div class="ml-10 flex items-baseline space-x-3">{getLinks}</div>
             </div>
           </div>
           <div class="-mr-2 flex md:hidden">
@@ -142,7 +138,7 @@ const Nav = () => {
       <animated.div style={props} class="md:hidden flex">
         <div class="px-2 pt-2 pb-3 sm:px-3 m-auto space-y-6 flex flex-col">
           {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-          {getLinks(data, true)}
+          {getLinks}
         </div>
       </animated.div>
     </nav>

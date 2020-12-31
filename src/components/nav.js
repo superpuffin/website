@@ -60,15 +60,15 @@ const Nav = () => {
 
   const props = useSpring({
     config: {
-      tension: 500,
-      mass: 1.5,
-      friction: 50,
+      tension: 420,
+      mass: 1.65,
+      friction: 25,
     },
     from: { display: "none", height: "0px", opacity: 0 },
     to: async (next, cancel) => {
       await next({ display: "flex" })
       await next({
-        height: navVisible ? "350px" : "0px",
+        height: navVisible ? "450px" : "0px",
         opacity: navVisible ? 1 : 0,
       })
       await next({ display: navVisible ? "flex" : "none" })

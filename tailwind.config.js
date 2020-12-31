@@ -13,9 +13,16 @@ module.exports = {
     extend: {
       colors: {
         // Blue
-        primary: "#00a7e1",
+        primary: {
+          dark: "#00425a",
+          DEFAULT: "#00a7e1",
+          light: "#8ce1ff",
+        },
         // Purple
-        secondary: "#53599a",
+        secondary: {
+          DEFAULT: "#53599a",
+          dark: "#3a3e6b",
+        },
         // Snow
         ysnow: "#fbf5f3",
         // Black

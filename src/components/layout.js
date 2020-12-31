@@ -24,13 +24,22 @@ const Layout = ({ children }) => {
         {children}
       </main>
 
-      <footer className="p-4 w-full mx-auto lg:pt-6 xl:pt-8">
-        <div className="max-w-3xl xl:max-w-4xl mx-auto">
-          <p className="mx-auto">
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.com">Gatsby</a>
-          </p>
+      <footer>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 290"
+          className="fill-current text-primary-dark"
+        >
+          <path d="M0,256L80,245.3C160,235,320,213,480,213.3C640,213,800,235,960,250.7C1120,267,1280,277,1360,282.7L1440,288L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+        </svg>
+        <div className="p-4 w-full mx-auto lg:pt-6 xl:pt-8 bg-primary-dark">
+          <div className="max-w-3xl xl:max-w-4xl mx-auto">
+            <p className="mx-auto text-ysnow">
+              © {new Date().getFullYear()}, Built with
+              {` `}
+              <a href="https://www.gatsbyjs.com">Gatsby</a>
+            </p>
+          </div>
         </div>
       </footer>
     </div>

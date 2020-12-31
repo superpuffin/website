@@ -39,7 +39,7 @@ const BlogIndex = ({ data, location }) => {
                 itemType="http://schema.org/Article"
               >
                 <header>
-                  <h2 className="text-secondary font-serif font-extrabold text-2xl hover:text-primary">
+                  <h2 className="text-secondary-dark font-serif font-extrabold text-2xl hover:text-primary">
                     <Link to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>

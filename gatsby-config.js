@@ -4,13 +4,11 @@ module.exports = {
     title: `Yorgos Bos`,
     author: {
       name: `Yorgos Bos`,
-      summary: ``,
+      summary: `A biology student with an interest for web development cycling and cooking.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    description: `My personal blog`,
+    siteUrl: `https://superpuffin.github.io/website`,
+    social: {},
     menuLinks: [
       {
         name: "Home",
@@ -75,11 +73,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Yorgos Bos - Blog`,
+        short_name: `Yorgos Bos`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#00a7e1`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },

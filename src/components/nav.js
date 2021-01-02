@@ -119,7 +119,7 @@ const Nav = () => {
           <div class="-mr-2 flex md:hidden">
             {/* <!-- Mobile menu button --> */}
             <button
-              className="text-ysnow hover:text-secondary inline-flex items-center justify-center p-1 focus:outline-none rounded focus:ring focus:ring-1 focus:ring-white"
+              className="text-ysnow hover:text-secondary inline-flex items-center justify-center p-1 focus:outline-none rounded focus:ring focus:ring-white"
               onClick={() => setNavVisible(!navVisible)}
             >
               <span class="sr-only">Open main menu</span>

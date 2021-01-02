@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 const About = () => {
   return (
     <Layout>
-      <SEO />
+      <SEO title="Send me a message" />
       <div className="prose xl:prose-xl xl:max-w-5xl lg:prose-lg">
         <h1 class="">Contact Me!</h1>
         <form

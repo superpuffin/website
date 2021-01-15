@@ -79,7 +79,7 @@ const Nav = () => {
     return (
       <Link
         className={
-          "px-3 sm:text-center rounded-md font-bold sm:text-xl md:text-sm py-2 mx-1 text-ysnow hover:text-secondary hover:bg-ysnow"
+          "px-3 sm:text-center rounded-md font-bold sm:text-xl md:text-sm py-2 mx-1 text-ysnow hover:text-secondary"
         }
         to={link.link}
       >
